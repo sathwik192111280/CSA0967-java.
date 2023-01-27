@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+class squareroot
+{
+public static void main(String args[])
+{
+System.out.print("enter a number");
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+System.out.println("The Square root of "+ n-" is: "+squareroot (n));  
+}
+public static double squareroot(int n)
+{
+double t;  
+double sqrtroot=n/2;  
+do   
+{  
+t=sqrtroot;  
+sqrtroot=(t+(n/t))/2;  
+}   
+while((t-sqrtroot)!= 0);  
+return sqrtroot;  
+}  
+}  
+
+
+output
+
+enter a number4
+The Square root of 4 is: 2.0
