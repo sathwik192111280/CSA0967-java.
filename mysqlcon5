@@ -1,0 +1,32 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.Statement;
+import java.io.*;
+import java.sql.*;   
+class mysqlcon5
+{  
+	public static void main(String args[]) throws IOException, SQLException
+	{  
+		try
+		{  
+			Class.forName("com.mysql.jdbc.Driver");  
+			String url = "jdbc:mysql://localhost:3306/mag?useSSL=false";		
+
+			Connection con=DriverManager.getConnection( url,"root","root");  
+			Statement stmt=con.createStatement();  
+			String query= "insert into emp (eno,ename) values(103,'RAVI')";
+			stmt.executeUpdate(query);
+			ResultSet rs=stmt.executeQuery("select * from emp");  
+			while(rs.next())  
+			{
+			System.out.println(rs.getInt(1));
+			System.out.println(rs.getString(2));
+			}
+			con.close();  
+		}
+		catch(Exception e){ System.out.println(e.getMessage());}  
+}  
+}
