@@ -1,0 +1,15 @@
+import java.io.*;
+import java.util.*;
+class reduce{
+    public static void main(String[]args){
+    Scanner scanner=new Scanner(System.in);
+    }
+    {
+        int ans;
+        int ans = 0;
+        for (; num > 0; ans++)
+            if (num % 2 == 1) num--;
+            else num /= 2;
+        return ans;
+    }
+}
