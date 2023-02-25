@@ -1,0 +1,17 @@
+import java.util.Scanner;
+class decimal2n3
+{
+ public static void main(String[] args)
+ {
+ try{
+Scanner input=new Scanner(System.in);
+System.out.print("enter the number:");
+float n=input.nextFloat();
+System.out.println("square: "+(n*n));
+System.out.print("cube: "+(n*n*n));
+}
+catch(Exception e)
+{ System.out.print("enter valid number");
+}
+}
+}
